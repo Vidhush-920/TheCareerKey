@@ -77,7 +77,7 @@
         <div class="notes-div">
             <h5 class="text-start" id="pageFiveNotesTitle">Career Counselling Notes</h5>
             <div class="form-group">
-                <textarea class="form-control" name="person-career-notes" id="exampleFormControlTextarea1" rows="3" editable="false"></textarea>
+                <textarea class="form-control" name="person-career-notes" id="exampleFormControlTextarea2" rows="3" editable="false"></textarea>
             </div>
         </div>
         
