@@ -636,7 +636,7 @@ function validatePageFive() {
 // });
 
 function handlePageOneReset() {
-    const keysToReset = ['page', 'progress', 'person', 'results_section1', 'results_section2', 'results_overall', 'completedQuestions', 'resultDate']; // 'lang' is preserved
+    const keysToReset = ['page', 'progress', 'person', 'results_section1', 'results_section2', 'results_overall', 'completedQuestions', 'resultDate', 'resultNotes']; // 'lang' is preserved
     keysToReset.forEach(key => localStorage.removeItem(STORAGE_PREFIX + key));
     // Write function alternative to location.reload();
     window.location.href = window.location.href;
@@ -683,6 +683,7 @@ function handlePageFiveDisplay() {
         $('#pageFivePersonNIC').text(person.personNIC);
         const recordDate = localStorage.getItem(STORAGE_PREFIX + 'resultDate') || '';
         $('#pageFiveDate').text(recordDate);
+        $('#exampleFormControlTextarea2').val(localStorage.getItem(STORAGE_PREFIX + 'resultNotes') || '');
     }
 }
 
@@ -781,6 +782,8 @@ function viewPreviousResults() {
                 conventional: parseInt(data.score_c, 10)
             };
             localStorage.setItem(STORAGE_PREFIX + 'results_overall', JSON.stringify(prevResults));
+            const resultNotes = data.notes || '';
+            localStorage.setItem(STORAGE_PREFIX + 'resultNotes', resultNotes);
             updateChart(prevResults);
             changePage(5);
             // $('#page5 #pageFiveDate').text(data.created_at).slice(0, 10);

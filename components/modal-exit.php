@@ -6,7 +6,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="exitTestModalDescription">
-                Please confirm that you want to exit from the test. All your records will be removed.
+                Please confirm that you want to exit from the test.
+                <br>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" onclick="changePage(1)" id="exitTestModalButton">Confirm</button>
