@@ -175,7 +175,7 @@ let translations = {
         entryTestModalButton: 'Start Anyway',
         discardTestModalButton: 'Discard',
         exitTestModalLabel: 'Are you sure?',
-        exitTestModalDescription: 'Please confirm that you want to exit from the test. All your records will be removed.',
+        exitTestModalDescription: 'Please confirm that you want to exit from the test.',
         exitTestModalButton: 'Confirm',
         chartCols: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional']
     },
@@ -313,7 +313,7 @@ let translations = {
         entryTestModalButton: 'නැවත ආරම්භ කරන්න',
         discardTestModalButton: 'අවලංගු කරන්න',
         exitTestModalLabel: 'ඔබට විශ්වාසද?',
-        exitTestModalDescription: 'ඔබට පරීක්ෂණයෙන් ඉවත් වීමට අවශ්‍ය බව කරුණාකර තහවුරු කරන්න. ඔබගේ සියලුම වාර්තා ඉවත් කරනු ලැබේ.',
+        exitTestModalDescription: 'ඔබට පරීක්ෂණයෙන් ඉවත් වීමට අවශ්‍ය බව කරුණාකර තහවුරු කරන්න.',
         exitTestModalButton: 'තහවුරු කරන්න',
         chartCols: ['යථාර්ථ නිරූපිත', 'විමර්ශනාත්මක', 'කලාත්මක', 'සමාජීය', 'ධෛර්ය සම්පන්න', 'චාරිත්‍රානුකූල']
     },
@@ -451,7 +451,7 @@ let translations = {
         entryTestModalButton: 'மீண்டும் தொடங்கவும்',
         discardTestModalButton: 'நிராகரிக்கவும்',
         exitTestModalLabel: 'நீங்கள் சொல்வது உறுதியா?',
-        exitTestModalDescription: 'நீங்கள் சோதனையிலிருந்து வெளியேற விரும்புகிறீர்கள் என்பதை உறுதிப்படுத்தவும். உங்கள் எல்லா பதிவுகளும் அகற்றப்படும்.',
+        exitTestModalDescription: 'நீங்கள் சோதனையிலிருந்து வெளியேற விரும்புகிறீர்கள் என்பதை உறுதிப்படுத்தவும்.',
         exitTestModalButton: 'உறுதிப்படுத்தவும்',
         chartCols: ['யதார்த்தமானது', 'விசாரணை', 'கலை', 'சமூக', 'தொழில்முனைவு', 'வழக்கமான']
     }
