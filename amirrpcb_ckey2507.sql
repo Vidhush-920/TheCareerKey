@@ -44,16 +44,7 @@ CREATE TABLE IF NOT EXISTS `ckey_results` (
   PRIMARY KEY (`nic`,`log_no`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `ckey_results`
---
 
-INSERT INTO `ckey_results` (`rec_id`, `name`, `nic`, `log_no`, `score_r`, `score_i`, `score_a`, `score_s`, `score_e`, `score_c`, `created_at`, `notes`) VALUES
-(1, 'Pawan', '200026401289', 1, 7, 10, 10, 12, 10, 12, '2026-01-08 06:59:15', ''),
-(2, 'Ashok', '200127801345', 1, 13, 13, 10, 11, 11, 11, '2026-01-20 05:50:08', NULL),
-(3, 'Johnny', '199923456789', 1, 11, 9, 12, 13, 10, 10, '2026-01-22 06:32:18', NULL),
-(4, 'Ashok', '200127801345', 2, 11, 12, 15, 12, 11, 9, '2026-01-23 05:05:22', NULL),
-(5, 'Bob Brown', '173982648282', 1, 12, 8, 17, 15, 13, 12, '2026-05-05 10:21:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -66,15 +57,15 @@ CREATE TABLE IF NOT EXISTS `ckey_roles` (
   `role_id` int NOT NULL AUTO_INCREMENT,
   `role_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `role_description` text COLLATE utf8mb4_unicode_ci,
-  `crud_staff` tinyint(1) NOT NULL DEFAULT '0',
-  `crud_admins` tinyint(1) NOT NULL DEFAULT '0',
-  `update_role` tinyint(1) NOT NULL DEFAULT '0',
-  `view_results` tinyint(1) NOT NULL DEFAULT '1',
-  `crud_results` tinyint(1) NOT NULL DEFAULT '0',
+  `crud_staff` tinyint(1) NOT NULL DEFAULT 0,
+  `crud_admins` tinyint(1) NOT NULL DEFAULT 0,
+  `update_role` tinyint(1) NOT NULL DEFAULT 0,
+  `view_results` tinyint(1) NOT NULL DEFAULT 1,
+  `crud_results` tinyint(1) NOT NULL DEFAULT 0,
   `role_status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   PRIMARY KEY (`role_id`),
   UNIQUE KEY `role_name` (`role_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `ckey_roles`
@@ -107,14 +98,16 @@ CREATE TABLE IF NOT EXISTS `ckey_staffs` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `nic` (`nic`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `ckey_staffs`
 --
 
 INSERT INTO `ckey_staffs` (`staff_id`, `username`, `fname`, `lname`, `nic`, `email`, `phone`, `role`, `password_hash`, `status`) VALUES
-(1, 'randomsa023', 'S.A.', 'Random', '204028401286', 'randsa23@gmail.com', '', 'superadmin', '', 'active');
+(1, 'sauser0152', 'SuperAd', 'User', '209912345679', 'sauser01@vcot.com', '', 'superadmin', '$2y$10$54VQ7lAuVaBkzvobLp0Ox.rtWWM7LmiMfjc9fi7Hb6HfF50iLFPQO', 'active'),
+(2, 'aduser003', 'Admin', 'User', '209643218745', 'aduser03@vcot.com', '', 'admin', '$2y$10$rgE9iTVEO9JVz8kazNUkkeMPp3Fpx9BLcXV9fLg7zseldSbiYh0iO', 'active'),
+(3, 'staffuser678', 'Staff', 'User', '209214235867', 'staffuser7@vcot.com', '', 'staff', '$2y$10$VFHgJdR/v1fRrIfdRPt1rO4iPPnIjuKyEMRioD8pt0mVxlRffCWx6', 'active');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
